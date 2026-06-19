@@ -2,37 +2,53 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>MediaPay Solana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Allo Solana</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    box-sizing:border-box;
+}
+
+iframe{
+    width:460px;
+    height:740px;
+    border:1px solid #000;
+}
+</style>
 </head>
+
 <body>
 
 <h1>Acheter 1€ de Solana</h1>
 
-<form>
-    <p>
-        <input type="email"
-               placeholder="Votre email"
-               required>
-    </p>
+<p>
+Saisissez votre email et votre adresse Solana puis effectuez le paiement par téléphone.
+</p>
 
-    <p>
-        <input type="text"
-               placeholder="Votre adresse Solana"
-               required>
-    </p>
+<input type="email" placeholder="Votre email">
 
-    <p>
-        <input type="text"
-               placeholder="Code MediaPay"
-               required>
-    </p>
+<input type="text" placeholder="Votre adresse Solana">
 
-    <p>
-        <button type="submit">
-            Valider
-        </button>
-    </p>
-</form>
+<h2>Paiement par téléphone</h2>
+
+<iframe
+src="https://api.media-pay.fr/iframe/api.php?IDENTIFIANT=10f2154658"
+name="mediapay_code"
+scrolling="no"
+frameborder="0">
+</iframe>
 
 </body>
 </html>
